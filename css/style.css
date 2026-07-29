@@ -23,3 +23,24 @@
   .event-card { align-items: flex-start; }
   .event-link { margin-top: .8rem; }
 }
+
+/* ===== Hirao Web System v2 ===== */
+.section-label{font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.18em;font-weight:700;color:var(--accent)}
+.dark .section-label{color:#ef794d}
+.contact .section-label{color:white}
+.schedule-follow{max-width:440px}
+.schedule-follow>p{margin-bottom:12px}
+.text-links{display:flex;gap:18px;flex-wrap:wrap}
+.text-links a{font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;border-bottom:1px solid currentColor;padding-bottom:3px}
+.member-card{min-width:0}
+.member-role{font-size:10px!important;letter-spacing:.16em;color:var(--accent);font-weight:700;margin-bottom:4px}
+.member-roman{display:block;font-family:Montserrat,sans-serif;font-size:10px;margin-bottom:18px}
+.member-description{font-size:14px;line-height:1.8;margin:18px 0 0}
+.member-links{display:flex;gap:16px;margin-top:18px}
+.member-links a{font-family:Montserrat,sans-serif;font-size:11px;font-weight:700;border-bottom:1px solid currentColor}
+.contact-head{align-items:end}
+.contact-head>p{max-width:520px}
+.service-cards{background:rgba(255,255,255,.28);border-color:rgba(255,255,255,.28)}
+.service-cards article{background:rgba(255,255,255,.96);color:var(--ink)}
+.contact-scenes span{border-color:rgba(255,255,255,.48)}
+[hidden]{display:none!important}

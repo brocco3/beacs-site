@@ -1,68 +1,35 @@
-# Hirao Web Template v1.1 / The Beacs
+# Hirao Web System v2.0 / THE BEACS PROJECT
 
 Cloudflare Pages + GitHub + Google Sheetsで運用する静的サイトです。
 
-## 現在接続済み
+## 管理場所
 
-- Events：Google Sheetsから自動取得
-- 状態バッジ：受付中／残席わずか／満席／中止／終了を自動色分け
-- 日付順：自動並び替え
-- 表示列：TRUEのみ表示
+- Google Sheets: Site / Events / Members
+- GitHub: HTML・CSS・JavaScript・画像
+- Cloudflare Pages: GitHub更新時に自動公開
 
-## 更新方法
+## Siteシート
 
-### 出演予定
-Google SheetsのEventsシートを編集するだけです。GitHubへの再アップロードは不要です。
+`Key, Value`形式で管理します。
 
-### デザイン・文章・画像
-GitHubの該当ファイルを変更してCommitすると、Cloudflare Pagesが自動公開します。
+- site_name
+- tagline
+- description
+- instagram
+- line
+- youtube
+- email
 
-## サイト固有設定
+## Membersシート
 
-`js/config.js` に集約しています。
+推奨列:
 
-```js
-window.SITE_CONFIG = {
-  sheets: {
-    events: { enabled: true, csvUrl: "...", target: "#schedule-list" },
-    news: { enabled: false, csvUrl: "", target: "#news-list" },
-    works: { enabled: false, csvUrl: "", target: "#works-list" },
-    members: { enabled: false, csvUrl: "", target: "#members-list" }
-  }
-};
-```
+`表示 / 名前 / 担当 / 紹介 / HP / Instagram / 画像 / 英字名`
 
-News・Works・Membersを使うときは、各CSV URLを入力して`enabled: true`にします。
+画像列にはURLではなくファイル名を入力します。
 
-## Google Sheetsの項目
+例: `shingo.png`
 
-テンプレートCSVは `data/templates/` にあります。
+画像本体は `images/members/` に置きます。
 
-- `events.csv`
-- `news.csv`
-- `works.csv`
-- `members.csv`
-
-## ファイル構造
-
-```text
-index.html
-css/style.css
-js/config.js
-js/sheets.js
-js/main.js
-js/renderers/
-  events.js
-  news.js
-  works.js
-  members.js
-data/templates/
-images/
-assets/
-404.html
-README.md
-```
-
-## 注意
-
-Google Sheetsの「ウェブに公開」で公開した内容は、URLを知る人から取得できます。内部メモ、個人情報、非公開情報は入れないでください。
+Membersシート公開後、`js/config.js` の `members.csvUrl` を設定し、`enabled` を `true` にしてください。

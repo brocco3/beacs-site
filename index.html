@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="津軽三味線、打楽器、鍵盤楽器が交差する音楽プロジェクト The Beacs。愛知県を拠点に、ライブ・学校公演・出張演奏を行っています。">
-  <title>The Beacs | Blend of Entertainment Art Cultures</title>
+  <meta name="description" content="愛知県を拠点に、生演奏のライブ活動をしています。">
+  <title>THE BEACS PROJECT | Blend of Entertainment Art Cultures</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -12,10 +12,14 @@
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="#top"><strong>THE BEACS</strong><span>Blend of Entertainment Art Cultures</span></a>
+  <a class="brand" href="#top"><strong data-site-text="site_name">THE BEACS PROJECT</strong><span>Blend of Entertainment Art Cultures</span></a>
   <button class="menu-button" aria-label="メニューを開く" aria-expanded="false">MENU</button>
   <nav class="nav" aria-label="メインメニュー">
-    <a href="#about">About</a><a href="#schedule">Schedule</a><a href="#service">Service</a><a href="#members">Members</a><a href="#movie">Movie</a><a class="nav-cta" href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#members">Members</a>
+    <a href="#movie">Movie</a>
+    <a class="nav-cta" href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -24,65 +28,78 @@
   <div class="hero-image" role="img" aria-label="The Beacs 演奏写真を配置する領域"></div>
   <div class="hero-copy">
     <p class="eyebrow">JUST HAVE FUN</p>
-    <h1>異なる音が交わる。<br>まだ知らない景色が、鳴りはじめる。</h1>
+    <h1 data-site-text="tagline">異なる音が交わる。まだ知らない景色が、鳴りはじめる。</h1>
     <p>津軽三味線、打楽器、鍵盤楽器。文化も背景も異なる音が交錯し、どこか懐かしく、新しい音楽を奏でます。</p>
     <div class="actions"><a class="button primary" href="#schedule">出演予定を見る</a><a class="button secondary" href="#contact">演奏を依頼する</a></div>
   </div>
 </section>
 
 <section class="section intro" id="about">
-  <p class="section-number">01 / ABOUT</p>
+  <p class="section-label">ABOUT</p>
   <div class="two-column">
     <h2>芸術文化の融合を、<br>ひとつのステージへ。</h2>
-    <div><p>The Beacs（ビークス）は、津軽三味線奏者・鈴木臣吾が主催する音楽プロジェクトです。</p><p>津軽三味線の力強い旋律、リズム感あふれる打楽器、鍵盤楽器が描くハーモニー。主要メンバー3人を中心に、時にゲストを迎えながら、愛知県を拠点に活動しています。</p><p class="meaning">The Beacs = <strong>Blend of Entertainment Art Cultures</strong></p></div>
+    <div>
+      <p>The Beacs（ビークス）は、津軽三味線奏者・鈴木臣吾が主催する音楽プロジェクトです。</p>
+      <p>津軽三味線の力強い旋律、リズム感あふれる打楽器、鍵盤楽器が描くハーモニー。主要メンバー3人を中心に、時にゲストを迎えながら、<span data-site-text="description">愛知県を拠点に、生演奏のライブ活動をしています。</span></p>
+      <p class="meaning">The Beacs = <strong>Blend of Entertainment Art Cultures</strong></p>
+    </div>
   </div>
 </section>
 
 <section class="section dark" id="schedule">
-  <div class="section-head"><div><p class="section-number">02 / SCHEDULE</p><h2>出演予定</h2></div><p>最新情報はInstagram・公式LINEでもお知らせします。</p></div>
+  <div class="section-head">
+    <div><p class="section-label">SCHEDULE</p><h2>出演予定</h2></div>
+    <div class="schedule-follow">
+      <p>最新情報はInstagram・公式LINEでもお知らせします。</p>
+      <div class="text-links">
+        <a data-site-href="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a data-site-href="line" href="#" target="_blank" rel="noopener">公式LINE</a>
+      </div>
+    </div>
+  </div>
   <div id="schedule-list" class="schedule-list" aria-live="polite">
-    <article class="schedule-status">
-      <div><p>SCHEDULE</p><h3>出演予定を読み込んでいます</h3><span>しばらくお待ちください</span></div>
-    </article>
+    <article class="schedule-status"><div><p>SCHEDULE</p><h3>出演予定を読み込んでいます</h3><span>しばらくお待ちください</span></div></article>
   </div>
-</section>
-
-<section class="section" id="service">
-  <p class="section-number">03 / PERFORMANCE SERVICE</p>
-  <div class="section-head"><h2>演奏のご依頼</h2><p>会場、客層、目的に合わせて、楽器構成や演目をご提案します。</p></div>
-  <div class="cards">
-    <article><span>01</span><h3>3人編成<br>コンパクト出張演奏</h3><p>三味線・打楽器・鍵盤による多彩な編成。イベント、宿泊施設、飲食店などに。</p></article>
-    <article><span>02</span><h3>学校公演<br>楽器体験付き</h3><p>鑑賞だけでなく、和楽器やリズムに触れる体験を組み合わせた公演です。</p></article>
-    <article><span>03</span><h3>和太鼓隊と<br>フルコンサート</h3><p>大人数編成ならではの迫力と、舞台全体を使ったエンターテインメントを届けます。</p></article>
-  </div>
-  <div class="scene-line"><span>神社仏閣・祭り</span><span>宿泊施設</span><span>企業イベント</span><span>ライブ・フェス</span><span>学校公演</span></div>
 </section>
 
 <section class="section members" id="members">
-  <p class="section-number">04 / MEMBERS</p><h2>音の背景が違う。<br>だから、面白い。</h2>
+  <p class="section-label">MEMBERS</p>
+  <h2>音の背景が違う。<br>だから、面白い。</h2>
   <div class="member-grid" id="members-list">
-    <article><div class="portrait p1"></div><p>津軽三味線・和太鼓</p><h3>鈴木 臣吾</h3><span>SHINGO SUZUKI</span></article>
-    <article><div class="portrait p2"></div><p>打楽器</p><h3>弓立 翔哉</h3><span>SHOYA YUDATE</span></article>
-    <article><div class="portrait p3"></div><p>鍵盤楽器・クリエイター</p><h3>平尾 卓也</h3><span>TAKUYA HIRAO</span></article>
+    <article class="member-card"><img class="member-photo" src="images/members/shingo.png" alt="鈴木 臣吾" loading="lazy"><p class="member-role">津軽三味線・和太鼓</p><h3>鈴木 臣吾</h3><span class="member-roman">SHINGO SUZUKI</span></article>
+    <article class="member-card"><img class="member-photo" src="images/members/shoya.png" alt="弓立 翔哉" loading="lazy"><p class="member-role">打楽器</p><h3>弓立 翔哉</h3><span class="member-roman">SHOYA YUDATE</span></article>
+    <article class="member-card"><img class="member-photo" src="images/members/takuya.png" alt="平尾 卓也" loading="lazy"><p class="member-role">鍵盤楽器・クリエイター</p><h3>平尾 卓也</h3><span class="member-roman">TAKUYA HIRAO</span></article>
   </div>
 </section>
 
 <section class="section movie" id="movie">
-  <p class="section-number">05 / MOVIE</p><h2>音を、映像で。</h2>
-  <a class="video-placeholder" href="https://www.youtube.com/" target="_blank" rel="noopener"><span>PLAY</span><p>YouTube演奏映像</p></a>
+  <p class="section-label">MOVIE</p><h2>音を、映像で。</h2>
+  <a class="video-placeholder" data-site-href="youtube" href="https://www.youtube.com/" target="_blank" rel="noopener"><span>PLAY</span><p>YouTube演奏映像</p></a>
 </section>
 
 <section class="contact" id="contact">
-  <p class="section-number">06 / CONTACT</p><h2>その場所に合う音を、<br>一緒に考えます。</h2><p>公演内容、会場規模、ご予算、日程など、まだ決まっていない段階でもご相談ください。</p>
-  <div class="actions"><a class="button light" href="https://lin.ee/tkTMgFQ" target="_blank" rel="noopener">公式LINEで相談</a><a class="button outline-light" href="https://www.instagram.com/shingo_suzuki1987/" target="_blank" rel="noopener">Instagram</a></div>
+  <p class="section-label">PERFORMANCE SERVICE / CONTACT</p>
+  <div class="section-head contact-head"><h2>その場所に合う音を、<br>一緒に考えます。</h2><p>会場、客層、目的に合わせて、楽器構成や演目をご提案します。まだ内容やご予算が決まっていない段階でもご相談ください。</p></div>
+  <div class="cards service-cards">
+    <article><span>01</span><h3>3人編成<br>コンパクト出張演奏</h3><p>三味線・打楽器・鍵盤による多彩な編成。イベント、宿泊施設、飲食店などに。</p></article>
+    <article><span>02</span><h3>学校公演<br>楽器体験付き</h3><p>鑑賞だけでなく、和楽器やリズムに触れる体験を組み合わせた公演です。</p></article>
+    <article><span>03</span><h3>和太鼓隊と<br>フルコンサート</h3><p>大人数編成ならではの迫力と、舞台全体を使ったエンターテインメントを届けます。</p></article>
+  </div>
+  <div class="scene-line contact-scenes"><span>神社仏閣・祭り</span><span>宿泊施設</span><span>企業イベント</span><span>ライブ・フェス</span><span>学校公演</span></div>
+  <div class="actions">
+    <a class="button light" data-site-href="line" href="https://lin.ee/tkTMgFQ" target="_blank" rel="noopener">公式LINEで相談</a>
+    <a class="button outline-light" data-site-href="instagram" href="https://www.instagram.com/shingo_suzuki1987/" target="_blank" rel="noopener">Instagram</a>
+    <a class="button outline-light" data-site-href="email" href="#">メールで相談</a>
+  </div>
 </section>
 </main>
-<footer><div><strong>THE BEACS</strong><span>Blend of Entertainment Art Cultures</span></div><p>© The Beacs.</p></footer>
+
+<footer><div><strong data-site-text="site_name">THE BEACS PROJECT</strong><span>Blend of Entertainment Art Cultures</span></div><p>© The Beacs.</p></footer>
 <script src="js/config.js"></script>
 <script src="js/sheets.js"></script>
 <script src="js/main.js"></script>
+<script src="js/renderers/site.js"></script>
 <script src="js/renderers/events.js"></script>
-<script src="js/renderers/news.js"></script>
-<script src="js/renderers/works.js"></script>
 <script src="js/renderers/members.js"></script>
-</body></html>
+</body>
+</html>
