@@ -25,8 +25,18 @@
 
   const lightboxImage = lightbox.querySelector(".lightbox-image");
   const closeButton = lightbox.querySelector(".lightbox-close");
-  const triggers = document.querySelectorAll(".lightbox-trigger");
+  const triggers = Array.from(document.querySelectorAll(".lightbox-trigger"));
   let previousFocus = null;
+  let currentIndex = 0;
+  let touchStartX = 0;
+
+  const showImage = index => {
+    currentIndex = (index + triggers.length) % triggers.length;
+    const image = triggers[currentIndex].querySelector("img");
+    if (!image) return;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt;
+  };
 
   const closeLightbox = () => {
     lightbox.hidden = true;
@@ -36,13 +46,10 @@
     if (previousFocus) previousFocus.focus();
   };
 
-  triggers.forEach(trigger => {
+  triggers.forEach((trigger, index) => {
     trigger.addEventListener("click", event => {
-      const image = event.currentTarget.querySelector("img");
-      if (!image) return;
       previousFocus = event.currentTarget;
-      lightboxImage.src = image.currentSrc || image.src;
-      lightboxImage.alt = image.alt;
+      showImage(index);
       lightbox.hidden = false;
       document.body.classList.add("lightbox-open");
       closeButton.focus();
@@ -54,8 +61,19 @@
     if (event.target === lightbox || event.target === lightboxImage) closeLightbox();
   });
   document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
+    if (lightbox.hidden) return;
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowRight") showImage(currentIndex + 1);
+    if (event.key === "ArrowLeft") showImage(currentIndex - 1);
   });
+  lightbox.addEventListener("touchstart", event => {
+    touchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
+  lightbox.addEventListener("touchend", event => {
+    const distance = event.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(distance) < 48) return;
+    showImage(currentIndex + (distance < 0 ? 1 : -1));
+  }, { passive: true });
 })();
 
 
