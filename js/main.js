@@ -57,3 +57,24 @@
     if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
   });
 })();
+
+
+(() => {
+  "use strict";
+  const targets = document.querySelectorAll(
+    ".section-label, .two-column > *, .section-head > *, .member-card, .movie-frame, .performance-title-block, .performance-copy, .performance-photo, .contact-content"
+  );
+  if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    targets.forEach(target => target.classList.add("is-visible"));
+    return;
+  }
+  targets.forEach(target => target.classList.add("reveal"));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: .12, rootMargin: "0px 0px -5% 0px" });
+  targets.forEach(target => observer.observe(target));
+})();
