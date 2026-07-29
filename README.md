@@ -64,3 +64,8 @@ Cloudflare Pages + GitHub + Google Sheetsで運用する静的サイトです。
 - Membersシートを有効化
 - MOVIEにYouTube動画を埋め込み
 - Siteシートの `movie` キーで動画URLを差し替え可能
+
+
+## v2.5
+
+CONTACTを固定テキスト、6枚の演奏写真、問い合わせ導線で構成するギャラリーブロックへ更新。
