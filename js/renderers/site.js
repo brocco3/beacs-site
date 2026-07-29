@@ -40,6 +40,43 @@
     });
   }
 
+
+  function toYouTubeEmbedUrl(value) {
+    const raw = String(value || "").trim();
+    if (!raw) return "";
+
+    try {
+      const url = new URL(raw);
+      let videoId = "";
+
+      if (url.hostname.includes("youtu.be")) {
+        videoId = url.pathname.split("/").filter(Boolean)[0] || "";
+      } else if (url.hostname.includes("youtube.com")) {
+        if (url.pathname.startsWith("/embed/")) {
+          videoId = url.pathname.split("/embed/")[1]?.split("/")[0] || "";
+        } else if (url.pathname.startsWith("/shorts/")) {
+          videoId = url.pathname.split("/shorts/")[1]?.split("/")[0] || "";
+        } else {
+          videoId = url.searchParams.get("v") || "";
+        }
+      }
+
+      return /^[A-Za-z0-9_-]{6,}$/.test(videoId)
+        ? `https://www.youtube.com/embed/${videoId}`
+        : "";
+    } catch {
+      return "";
+    }
+  }
+
+  function applyMovie(settings) {
+    const iframe = document.querySelector("#main-movie");
+    if (!iframe || !settings.movie) return;
+
+    const embedUrl = toYouTubeEmbedUrl(settings.movie);
+    if (embedUrl) iframe.src = embedUrl;
+  }
+
   function applyMetadata(settings) {
     if (settings.site_name) {
       document.title = `${settings.site_name} | Blend of Entertainment Art Cultures`;
@@ -55,6 +92,7 @@
       const settings = toSettings(rows);
       applyText(settings);
       applyLinks(settings);
+      applyMovie(settings);
       applyMetadata(settings);
     })
     .catch(error => console.error("サイト設定の読み込みに失敗しました", error));

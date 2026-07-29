@@ -1,4 +1,4 @@
-# Hirao Web System v2.0 / THE BEACS PROJECT
+# Hirao Web System v2.2 / THE BEACS PROJECT
 
 Cloudflare Pages + GitHub + Google Sheetsで運用する静的サイトです。
 
@@ -33,3 +33,9 @@ Cloudflare Pages + GitHub + Google Sheetsで運用する静的サイトです。
 画像本体は `images/members/` に置きます。
 
 Membersシート公開後、`js/config.js` の `members.csvUrl` を設定し、`enabled` を `true` にしてください。
+
+
+## v2.2
+- Membersシートを有効化
+- MOVIEにYouTube動画を埋め込み
+- Siteシートの `movie` キーで動画URLを差し替え可能
