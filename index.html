@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="site-header">
@@ -40,9 +40,10 @@
 
 <section class="section dark" id="schedule">
   <div class="section-head"><div><p class="section-number">02 / SCHEDULE</p><h2>出演予定</h2></div><p>最新情報はInstagram・公式LINEでもお知らせします。</p></div>
-  <div class="schedule-list">
-    <article><time datetime="2026-09-07"><b>09.07</b><span>2026 SUN</span></time><div><p>LIVE</p><h3>公演タイトル</h3><span>会場名 / 愛知県</span></div><a href="#contact">DETAIL →</a></article>
-    <article><time><b>COMING</b><span>SOON</span></time><div><p>NEXT EVENT</p><h3>次回公演を準備中です</h3><span>詳細決定後に掲載します</span></div></article>
+  <div id="schedule-list" class="schedule-list" aria-live="polite">
+    <article class="schedule-status">
+      <div><p>SCHEDULE</p><h3>出演予定を読み込んでいます</h3><span>しばらくお待ちください</span></div>
+    </article>
   </div>
 </section>
 
@@ -59,7 +60,7 @@
 
 <section class="section members" id="members">
   <p class="section-number">04 / MEMBERS</p><h2>音の背景が違う。<br>だから、面白い。</h2>
-  <div class="member-grid">
+  <div class="member-grid" id="members-list">
     <article><div class="portrait p1"></div><p>津軽三味線・和太鼓</p><h3>鈴木 臣吾</h3><span>SHINGO SUZUKI</span></article>
     <article><div class="portrait p2"></div><p>打楽器</p><h3>弓立 翔哉</h3><span>SHOYA YUDATE</span></article>
     <article><div class="portrait p3"></div><p>鍵盤楽器・クリエイター</p><h3>平尾 卓也</h3><span>TAKUYA HIRAO</span></article>
@@ -77,5 +78,11 @@
 </section>
 </main>
 <footer><div><strong>THE BEACS</strong><span>Blend of Entertainment Art Cultures</span></div><p>© The Beacs.</p></footer>
-<script src="script.js"></script>
+<script src="js/config.js"></script>
+<script src="js/sheets.js"></script>
+<script src="js/main.js"></script>
+<script src="js/renderers/events.js"></script>
+<script src="js/renderers/news.js"></script>
+<script src="js/renderers/works.js"></script>
+<script src="js/renderers/members.js"></script>
 </body></html>
