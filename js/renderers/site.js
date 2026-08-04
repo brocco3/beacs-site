@@ -78,9 +78,6 @@
   }
 
   function applyMetadata(settings) {
-    if (settings.site_name) {
-      document.title = `${settings.site_name} | Blend of Entertainment Art Cultures`;
-    }
     if (settings.description) {
       const description = document.querySelector('meta[name="description"]');
       if (description) description.content = settings.description;

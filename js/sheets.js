@@ -55,12 +55,13 @@
     return !["false", "0", "no", "off", "非表示"].includes(flag);
   }
 
-  async function fetchSheet(csvUrl) {
+  async function fetchSheet(csvUrl, options = {}) {
     if (!csvUrl) throw new Error("CSV URLが設定されていません");
     const response = await fetch(csvUrl, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const text = await response.text();
-    return rowsToObjects(parseCsv(text)).filter(isVisible);
+    const items = rowsToObjects(parseCsv(text));
+    return options.visibleOnly === false ? items : items.filter(isVisible);
   }
 
   window.HiraoSheets = {

@@ -425,3 +425,127 @@ h2{letter-spacing:-.045em}
   .lightbox-trigger:hover img{transform:none;filter:saturate(.88) contrast(1.02)}
   .contact-main-link:hover{transform:none}
 }
+
+/* ===== Hirao Web System v3.3: Performance History / Contact copy ===== */
+.performance-history{
+  max-width:var(--max);
+  margin:clamp(110px,11vw,170px) auto 0;
+  padding-top:clamp(70px,7vw,100px);
+  border-top:1px solid var(--line);
+  display:grid;
+  grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr);
+  gap:clamp(60px,10vw,150px);
+}
+.performance-history-head .section-label{margin-bottom:20px}
+.performance-history-head h3{
+  margin:0;
+  font-family:Montserrat,"Noto Sans JP",sans-serif;
+  font-size:clamp(28px,3.3vw,48px);
+  line-height:1.12;
+  letter-spacing:-.04em;
+}
+.performance-history-list{border-top:1px solid var(--line)}
+.performance-history-year{
+  display:grid;
+  grid-template-columns:90px 1fr;
+  gap:24px;
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+}
+.performance-history-year h4{
+  margin:0;
+  font-family:Montserrat,sans-serif;
+  font-size:16px;
+  letter-spacing:.08em;
+}
+.performance-history-year ul{list-style:none;margin:0;padding:0}
+.performance-history-year li{line-height:1.8;color:var(--muted)}
+.performance-history-year li+li{margin-top:8px}
+.performance-history-year a{color:inherit;border-bottom:1px solid transparent}
+.performance-history-year a:hover{color:var(--ink);border-color:currentColor}
+.performance-history-status{margin:0;padding:28px 0;color:var(--muted);border-bottom:1px solid var(--line)}
+.contact-lead{
+  margin:0 0 38px;
+  font-size:clamp(19px,2vw,26px);
+  line-height:1.8;
+}
+.contact-faq{margin-bottom:48px;border-top:1px solid var(--line)}
+.contact-faq-item{
+  display:grid;
+  grid-template-columns:minmax(250px,.9fr) minmax(0,1.1fr);
+  gap:36px;
+  padding:24px 0;
+  border-bottom:1px solid var(--line);
+}
+.contact-faq-item p{margin:0;line-height:1.9;color:var(--muted)}
+.contact-faq-item .contact-question{color:var(--ink);font-weight:500}
+@media(max-width:850px){
+  .performance-history{grid-template-columns:1fr;gap:40px;margin-top:88px;padding-top:62px}
+  .performance-history-year{grid-template-columns:64px 1fr;gap:18px;padding:23px 0}
+  .contact-lead{margin-bottom:28px}
+  .contact-faq{margin-bottom:38px}
+  .contact-faq-item{grid-template-columns:1fr;gap:7px;padding:22px 0}
+}
+
+/* ===== Hirao Web System v3.4: Compact History / Contact ===== */
+.performance-subtitle{
+  max-width:390px;
+  margin:28px 0 0;
+  font-size:14px;
+  line-height:1.9;
+  color:rgba(255,255,255,.65);
+}
+.performance-history{
+  margin-top:clamp(78px,8vw,120px);
+  padding-top:clamp(46px,5vw,68px);
+  grid-template-columns:minmax(210px,.58fr) minmax(0,1.42fr);
+  gap:clamp(42px,7vw,100px);
+}
+.performance-history-head h3{font-size:clamp(25px,2.7vw,40px)}
+.performance-history-year{
+  grid-template-columns:68px 1fr;
+  gap:18px;
+  padding:18px 0;
+}
+.performance-history-year h4{font-size:14px;padding-top:2px}
+.performance-history-year li{
+  display:grid;
+  grid-template-columns:52px minmax(180px,1fr) minmax(120px,.72fr);
+  gap:16px;
+  align-items:baseline;
+  min-width:0;
+  line-height:1.55;
+  font-size:13px;
+}
+.performance-history-year li+li{margin-top:10px}
+.performance-history-year time{
+  font-family:Montserrat,sans-serif;
+  font-size:10px;
+  letter-spacing:.08em;
+  color:rgba(255,255,255,.45);
+}
+.performance-history-title{color:rgba(255,255,255,.86)}
+.performance-history-venue{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:rgba(255,255,255,.48);
+}
+.contact{padding-top:92px;padding-bottom:100px}
+.contact .section-label{margin-bottom:28px}
+.contact-lead{margin-bottom:18px;font-size:clamp(18px,1.7vw,23px)}
+.contact-message{max-width:720px;margin-bottom:30px;font-size:15px;line-height:1.9}
+.contact-main-link{padding-top:16px;font-size:clamp(18px,1.7vw,23px)}
+@media(max-width:850px){
+  .performance-subtitle{margin-top:22px;font-size:13px}
+  .performance-history{margin-top:70px;padding-top:48px;gap:28px}
+  .performance-history-year{grid-template-columns:52px 1fr;gap:12px;padding:17px 0}
+  .performance-history-year li{grid-template-columns:44px 1fr;gap:10px 12px;font-size:13px}
+  .performance-history-venue{grid-column:2;white-space:normal;font-size:12px}
+  .contact{padding-top:76px;padding-bottom:84px}
+  .contact-message{font-size:14px;line-height:1.85;margin-bottom:26px}
+}
+.performance-history{border-top-color:rgba(255,255,255,.16)}
+.performance-history-list{border-top-color:rgba(255,255,255,.16)}
+.performance-history-year{border-bottom-color:rgba(255,255,255,.12)}
+.performance-history-status{border-bottom-color:rgba(255,255,255,.12);color:rgba(255,255,255,.55)}

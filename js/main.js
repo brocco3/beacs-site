@@ -80,7 +80,7 @@
 (() => {
   "use strict";
   const targets = document.querySelectorAll(
-    ".section-label, .two-column > *, .section-head > *, .member-card, .movie-frame, .performance-title-block, .performance-copy, .performance-photo, .contact-content"
+    ".section-label, .two-column > *, .section-head > *, .member-card, .movie-frame, .performance-title-block, .performance-copy, .performance-photo, .performance-history-head, .performance-history-list, .contact-content"
   );
   if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     targets.forEach(target => target.classList.add("is-visible"));
