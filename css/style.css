@@ -549,3 +549,75 @@ h2{letter-spacing:-.045em}
 .performance-history-list{border-top-color:rgba(255,255,255,.16)}
 .performance-history-year{border-bottom-color:rgba(255,255,255,.12)}
 .performance-history-status{border-bottom-color:rgba(255,255,255,.12);color:rgba(255,255,255,.55)}
+
+/* ===== v3.5: Performance History responsive refinement ===== */
+/* タブレット以下では、見出しの下に履歴を配置して横幅を確保する */
+@media (max-width:1024px){
+  .performance-history{
+    grid-template-columns:1fr;
+    gap:36px;
+    margin-top:72px;
+    padding-top:52px;
+  }
+  .performance-history-head{
+    max-width:100%;
+  }
+  .performance-history-head h3{
+    max-width:none;
+    font-size:clamp(30px,5vw,42px);
+  }
+  .performance-history-list{
+    width:100%;
+  }
+}
+
+/* スマートフォンでは、年を独立させ、日付・公演名・会場を読みやすく並べる */
+@media (max-width:600px){
+  .performance-history{
+    gap:28px;
+    margin-top:62px;
+    padding-top:42px;
+  }
+  .performance-history-head .section-label{
+    margin-bottom:14px;
+  }
+  .performance-history-head h3{
+    font-size:clamp(29px,9vw,36px);
+    line-height:1.08;
+  }
+  .performance-history-year{
+    grid-template-columns:1fr;
+    gap:16px;
+    padding:24px 0;
+  }
+  .performance-history-year h4{
+    font-size:18px;
+    padding:0;
+  }
+  .performance-history-year li{
+    grid-template-columns:48px minmax(0,1fr);
+    gap:5px 12px;
+    align-items:start;
+    font-size:14px;
+    line-height:1.65;
+  }
+  .performance-history-year li+li{
+    margin-top:18px;
+  }
+  .performance-history-year time{
+    padding-top:2px;
+    font-size:10px;
+  }
+  .performance-history-title{
+    min-width:0;
+    overflow-wrap:anywhere;
+  }
+  .performance-history-venue{
+    grid-column:2;
+    overflow:visible;
+    text-overflow:clip;
+    white-space:normal;
+    font-size:12px;
+    line-height:1.6;
+  }
+}
