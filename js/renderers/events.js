@@ -51,7 +51,7 @@
 
     container.innerHTML = events.map(event => {
       const date = formatDate(event._date);
-      const title = escapeHtml(event["タイトル"] || "公演情報");
+      const title = escapeHtml(event["タイトル"] || "予定");
       const venue = escapeHtml(event["会場"] || "");
       const area = escapeHtml(event["地域"] || "");
       const open = escapeHtml(event["開場"] || "");
@@ -59,7 +59,7 @@
       const status = escapeHtml(event["状態"] || "");
       const note = escapeHtml(event["備考"] || "");
       const url = String(event["URL"] || "").trim();
-      const timeText = [open && `開場 ${open}`, start && `開演 ${start}`].filter(Boolean).join(" / ");
+      const timeText = [open && `開場 ${open}`, start && `開演 ${start}`, note].filter(Boolean).join(" / ");
       const placeText = [venue, area].filter(Boolean).join(" / ");
       const badge = status ? `<span class="status-badge ${statusClass(status)}">${status}</span>` : "";
       const link = /^https?:\/\//i.test(url)
@@ -72,7 +72,6 @@
           <div class="event-heading">${badge}<h3>${title}</h3></div>
           ${placeText ? `<p class="event-place">${placeText}</p>` : ""}
           ${timeText ? `<p class="event-time">${timeText}</p>` : ""}
-          ${note ? `<p class="event-note">${note}</p>` : ""}
         </div>
         ${link}
       </article>`;
