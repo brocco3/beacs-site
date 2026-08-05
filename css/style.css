@@ -645,3 +645,55 @@ h2{letter-spacing:-.045em}
     letter-spacing:.015em;
   }
 }
+
+
+/* ===== Contact CTA refinement v4.3 ===== */
+.contact-sub-links{
+  display:block;
+  width:100%;
+  margin-top:0;
+}
+.contact-sub-links .contact-secondary-link{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  width:100%;
+  min-height:58px;
+  padding:18px 0 15px;
+  border-bottom:1px solid rgba(25,25,25,.52);
+  font-family:"Noto Sans JP",sans-serif;
+  font-size:clamp(16px,1.55vw,21px);
+  font-weight:600;
+  line-height:1.45;
+  letter-spacing:.01em;
+  color:rgba(25,25,25,.78);
+  transition:color .25s ease,border-color .25s ease,transform .16s ease;
+}
+.contact-sub-links .contact-secondary-link span{
+  flex:0 0 auto;
+  font-size:1.2em;
+  transition:transform .25s ease;
+}
+.contact-sub-links .contact-secondary-link:hover{
+  color:var(--accent);
+  border-color:var(--accent);
+  transform:translateY(-2px);
+}
+.contact-sub-links .contact-secondary-link:hover span{
+  transform:translateX(8px);
+}
+.contact-sub-links .contact-secondary-link:active{
+  transform:scale(.99);
+}
+
+@media(max-width:850px){
+  .contact-sub-links{
+    margin-top:0;
+  }
+  .contact-sub-links .contact-secondary-link{
+    min-height:56px;
+    padding:17px 0 15px;
+    font-size:17px;
+  }
+}
