@@ -77,6 +77,7 @@
     if (embedUrl) iframe.src = embedUrl;
   }
 
+
   function applyMetadata(settings) {
     if (settings.description) {
       const description = document.querySelector('meta[name="description"]');

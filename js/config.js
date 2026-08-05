@@ -1,5 +1,5 @@
 /**
- * Hirao Web System v3.4
+ * Hirao Web System v3.7
  * 日常更新はGoogle Sheets、画像はGitHubで管理します。
  */
 window.SITE_CONFIG = {
@@ -14,12 +14,8 @@ window.SITE_CONFIG = {
     events: {
       enabled: true,
       csvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQwT7FeNIBt7Ro9AdSfBGCyWWIRlb4wmbX2BldadANolxsG58vSo6dK4Cf31y1JAWNalRirBlqIwXha/pub?gid=0&single=true&output=csv",
-      target: "#schedule-list"
-    },
-    history: {
-      enabled: true,
-      csvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQwT7FeNIBt7Ro9AdSfBGCyWWIRlb4wmbX2BldadANolxsG58vSo6dK4Cf31y1JAWNalRirBlqIwXha/pub?gid=0&single=true&output=csv",
-      target: "#performance-history-list"
+      target: "#schedule-list",
+      historyTarget: ".performance-venues"
     },
     members: {
       enabled: true,
