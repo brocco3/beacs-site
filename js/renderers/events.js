@@ -35,6 +35,7 @@
     if (["満席", "完売", "受付終了"].includes(value)) return "is-sold";
     if (["中止", "延期"].includes(value)) return "is-cancelled";
     if (["終了"].includes(value)) return "is-ended";
+    if (["観覧自由", "フリーライブ"].includes(value)) return "is-free";
     return "is-default";
   }
 
